@@ -22,14 +22,20 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
+            "extractCss": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              { "input": "src/styles/sergio.scss", "bundleName": "carmen", "lazy": true }
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/modernizr/modernizr.js",
+              "node_modules/mobile-detect/mobile-detect.min.js",
+              "node_modules/mobile-detect/mobile-detect-modernizr.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

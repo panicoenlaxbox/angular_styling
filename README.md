@@ -1,27 +1,24 @@
-# App1
+ng new app1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
+npm install modernizr --save
 
-## Development server
+npm install @types/modernizr --save-dev
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+cd node_modules/modernizr && .\bin\modernizr -c lib\config-all.json
 
-## Code scaffolding
+npm install mobile-detect --save
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### angular.json
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```json
+            "extractCss": true,
+            "styles": [
+              "src/styles.scss",
+              { "input": "src/styles/sergio.scss", "bundleName": "carmen", "lazy": true }
+            ],
+            "scripts": [
+              "node_modules/modernizr/modernizr.js",
+              "node_modules/mobile-detect/mobile-detect.min.js",
+              "node_modules/mobile-detect/mobile-detect-modernizr.js"
+            ],
+```

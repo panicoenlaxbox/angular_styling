@@ -1,0 +1,21 @@
+.batteryapi .square {    
+    background-color: red;
+    width: 300px;
+    height: 300px;
+}
+
+.no-batteryapi .square {    
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.mobile .sergio {
+    background-color: olive;
+    width: 250px;
+    height: 50px;
+}
+
+.no-mobile .sergio {
+    display: none;
+}
